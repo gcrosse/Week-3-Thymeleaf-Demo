@@ -1,8 +1,6 @@
 name: Lab 1 - AboutController Validation
 
 on:
-  push:
-    branches: [ main, 'feature/**' ]
   pull_request:
     branches: [ main ]
 
