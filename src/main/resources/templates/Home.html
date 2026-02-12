@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
-    <div th:insert="fragments/base :: assetsHead"></div>
+    <title>TekkenReborn - Home</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
 </head>
 <body>
+    <!-- Include Navbar -->
+    <div th:replace="fragments/navbar :: navbar"></div>
 
-    <nav th:replace="fragments/navbar :: navbar"></nav>
-    <div class="app-container text-center">
-        <div class="players-card">
-            <h2 th:text="${message}">Welcome</h2>
-            <p class="text-muted">Use the navigation above to browse the site.</p>
-        </div>
+    <!-- Page Content -->
+    <div class="container mt-4">
+        <h1>Welcome to TekkenReborn</h1>
+        <p>
+            Tekken Reborn is a high-energy fighting game that revives legendary characters with modern visuals and fast-paced combat.<br>
+            Players can master unique fighting styles, battle iconic rivals, and experience competitive gameplay designed for all skill levels.
+        </p>
+        <ul>
+            <li>Classic and new Tekken fighting</li>
+            <li>Fluid combat mechanics</li>
+            <li>Stunning arenas and animations</li>
+        </ul>
     </div>
 
-    <div th:insert="fragments/base :: assetsScripts"></div>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>

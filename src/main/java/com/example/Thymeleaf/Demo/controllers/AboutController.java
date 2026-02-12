@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AboutController {
 
-    @GetMapping("/about")
+    @GetMapping("/about") // matches navbar link th:href="@{/about}"
     public String about() {
-        return "about";
+        return "about"; // renders about.html
     }
 }

@@ -1,25 +1,27 @@
-<!DocType html>
-<html xmlns:th="http://wwww.thymeleaf.org">
-    <head>
-        <title> Tekken Reborn</title>
-        <link rel="stylesheet" th:href="@{/css/styles.css}">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Tekken Reborn</h1>
-                <p>
-                    Tekken Reborn is a high-energy fighting game that revives legendary characters with modern visuals and fast-paced combat.<br>
-                    Players can master unique fighting styles, battle iconic rivals, and experience competitive game play design for all skill levels.<br>
-                </p>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TekkenReborn - About</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+    <!-- Include Navbar -->
+    <div th:replace="fragments/navbar :: navbar"></div>
 
-                    <ul>
-                        <li>Classic and new Tekken Fighting</li>
-                        <li>Fluid combat mechanics</li>
-                        <li>Stunning arenas and animations</li>
-                    </ul>
+    <div class="container mt-4">
+        <h1>About TekkenReborn</h1>
+        <p>
+            Tekken Reborn is a fan-made project to manage and showcase Tekken fighters in a modern web interface.<br>
+            Learn about your favorite characters, track stats, and create custom fighters for a unique experience.
+        </p>
+        <ul>
+            <li>Track player and fighter stats</li>
+            <li>Create and manage custom fighters</li>
+            <li>Explore game history and iconic characters</li>
+        </ul>
+    </div>
 
-
-        </div>
-        
-    </body>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
 </html>

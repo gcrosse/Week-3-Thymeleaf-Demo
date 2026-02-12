@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fighters</title>
+    <link rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<h2 class="my-4">Fighters List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Health</th>
+            <th>Damage</th>
+            <th>Resistance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="fighter : ${fighters}">
+            <td th:text="${fighter.name}"></td>
+            <td th:text="${fighter.health}"></td>
+            <td th:text="${fighter.damage}"></td>
+            <td th:text="${fighter.resistance}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
